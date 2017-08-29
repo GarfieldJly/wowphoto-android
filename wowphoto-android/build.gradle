@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+//        apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+        classpath 'com.google.gms:google-services:3.0.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            credentials {
+                username "admin"
+                password "hbx123654"
+            }
+            url "http://218.244.148.200:1889/nexus/content/repositories/snapshots/"
+        }
+        maven {
+            credentials {
+                username "admin"
+                password "hbx123654"
+            }
+            url "http://218.244.148.200:1889/nexus/content/repositories/releases/"
+        }
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_back_no"/>
+    </RelativeLayout>
+
+    <com.milier.wowgallery.weight.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_default_big_picture"/>
+
+    <ImageView
+        android:id="@+id/save_iv"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/icon_download"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
+

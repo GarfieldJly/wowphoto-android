@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "69985507858",
+    "project_id": "firebase-wowgallery"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69985507858:android:8d0cc2f9fd07803b",
+        "android_client_info": {
+          "package_name": "com.milier.wowgallery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69985507858-hlrhj24irqdqcmi9aji1hoedjehmret2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.milier.wowgallery",
+            "certificate_hash": "3927583f55851c0105f9a6ca573cccf940c8dd50"
+          }
+        },
+        {
+          "client_id": "69985507858-k524ckt0kut4c882roqs3pppqfvtkmim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeIOCZf1gU4tTVUSkSH_My1CcP4Kcdibs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

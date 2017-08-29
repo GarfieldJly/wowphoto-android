@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/pic_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_default_picture"
+            android:adjustViewBounds="true" />
+
+        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+            <!--android:id="@+id/pic_iv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--fresco:actualImageScaleType="fitXY"-->
+            <!--fresco:fadeDuration="400"-->
+            <!--fresco:placeholderImage="@drawable/default_loading"-->
+            <!--fresco:placeholderImageScaleType="fitXY" />-->
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/item_pic_bg"/>
+
+        <TextView
+            android:id="@+id/count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/normal_margin"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_atlas"
+            android:gravity="center"
+            android:text="30"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/pic_iv"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_header"/>
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/header_image"
+            android:text="garfield"
+            android:textColor="@color/item_tv"
+            android:textSize="@dimen/normal_text_size"/>
+
+        <ImageView
+            android:id="@+id/fav_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:src="@drawable/icon_fav_no"/>
+
+        <TextView
+            android:id="@+id/fav_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/fav_iv"
+            android:text="10"
+            android:textColor="@color/item_tv"
+            android:textSize="@dimen/normal_text_size"/>
+    </RelativeLayout>
+
+</LinearLayout>

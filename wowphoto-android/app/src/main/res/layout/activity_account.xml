@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="25dp"
+              android:background="@color/light_grey"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            style="@style/title_imageview_style"/>
+
+        <TextView
+            style="@style/title_textview_style"
+            android:layout_toRightOf="@+id/back_iv"
+            android:text="Account"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_vip_banner"/>
+
+            <RelativeLayout
+                android:id="@+id/account_info_rl"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/normal_margin">
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="加菲猫"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text_size"/>
+
+                    <TextView
+                        android:id="@+id/day_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_tv"
+                        android:text="@string/days_remaining"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/small_text_size"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/continue_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/normal_margin"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/vip_renewal"
+                    android:textColor="@color/confirm_tv_bg"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/light_grey"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/normal_margin"
+                    android:text="@string/combo"
+                    android:textColor="#818181"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:text="@string/combo"-->
+                    <!--android:textColor="#818181"/>-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lineGrey"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/account_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

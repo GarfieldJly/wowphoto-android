@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><!--<android.support.design.widget.NavigationView--><!--android:id="@+id/nav_view"--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_gravity="start"--><!--android:fitsSystemWindows="true"--><!--app:headerLayout="@layout/nav_header_main"--><!--app:menu="@menu/activity_main_drawer"/>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/nav_view"
+              android:layout_width="200dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="start"
+              android:background="@color/white"
+              android:clickable="true"
+              android:orientation="vertical"
+              tools:ignore="RtlCompat">
+    <!--侧边栏是否包括 系统导航栏-->
+    <!--android:fitsSystemWindows="true"-->
+
+    <LinearLayout
+        android:id="@+id/menu_my_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/menu_header_image"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:src="@drawable/icon_header"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:text="@string/login"
+            android:textColor="@color/cancel_tv_bg"
+            android:textSize="@dimen/normal_text_size"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/login_tv"
+            android:layout_width="83dp"
+            android:layout_height="32dp"
+            android:background="@drawable/navdrawer_title_tv_no_bg"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/navdrawer_title_tv_color"
+            android:text="@string/login"
+            android:clickable="true"
+            android:textSize="@dimen/normal_text_size" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu_my_account"
+        style="@style/menu_style"
+        android:layout_marginTop="32dp">
+
+        <ImageView
+            android:id="@+id/account_iv"
+            style="@style/menu_imageview_style" />
+
+        <TextView
+            style="@style/menu_navigation_textview_style"
+            android:text="@string/account" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_my_fav"
+        style="@style/menu_style">
+
+        <ImageView
+            android:id="@+id/fav_iv"
+            style="@style/menu_imageview_style" />
+
+        <TextView
+            style="@style/menu_navigation_textview_style"
+            android:text="@string/my_favorite" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_feedback"
+        style="@style/menu_style">
+
+        <ImageView
+            android:id="@+id/feedback_iv"
+            style="@style/menu_imageview_style" />
+
+        <TextView
+            style="@style/menu_navigation_textview_style"
+            android:text="@string/feedback" />
+    </LinearLayout>
+
+</LinearLayout>
+

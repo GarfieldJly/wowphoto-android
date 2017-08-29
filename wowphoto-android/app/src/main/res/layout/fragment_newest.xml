@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.milier.wowgallery.weight.refresh.RefreshLoadMoreLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/receler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="43dp"
+            android:clipToPadding="false"/>
+        <!--android:clipToPadding="false"  当我们设置了paddingTop等属性时候，用来设置列表的内容是否可以绘制在padding区域，
+        默认是true，表示不可以绘制在padding区域，false表示可以在padding区域绘制-->
+    </com.milier.wowgallery.weight.refresh.RefreshLoadMoreLayout>
+
+    <ImageView
+        android:id="@+id/empty_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+        android:src="@drawable/icon_empty"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/empty_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/not_reachable"
+        android:textColor="@color/cancel_tv_bg"
+        android:textSize="@dimen/large_text_size"
+        android:visibility="gone"/>
+
+</RelativeLayout>

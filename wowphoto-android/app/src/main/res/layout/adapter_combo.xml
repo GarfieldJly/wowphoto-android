@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/item_rl"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/menu_bg"
+                android:clickable="true" >
+
+    <TextView
+        android:id="@+id/days_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:text="360 days"
+        android:textColor="@color/text_color"/>
+
+    <ImageView
+        android:id="@+id/go_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:src="@drawable/icon_go"/>
+
+    <TextView
+        android:id="@+id/unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/go_iv"
+        android:layout_centerVertical="true"
+        android:text="USD"
+        android:textColor="@color/text_color"/>
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/unit_tv"
+        android:text=""
+        android:textColor="@color/confirm_tv_bg"/>
+
+    <View
+        android:id="@+id/separate_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lineHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:background="@color/lineGrey"/>
+
+</RelativeLayout>

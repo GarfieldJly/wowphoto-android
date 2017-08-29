@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">wowgallery</string>
+    <string name="operateFail">operate failed</string>
+    <!--google key-->
+    <!--<string name="server_client_id">1013286991774-cdfm0mc4u9s1cnsof307gvntbhnku13e.apps.googleusercontent.com</string>-->
+    <string name="server_client_id">69985507858-k524ckt0kut4c882roqs3pppqfvtkmim.apps.googleusercontent.com</string>
+    <!--facebook key-->
+    <string name="facebook_app_id">133235693866191</string>
+
+    <string name="newest">NEW</string>
+    <string name="hotest">HOT</string>
+    <string name="account">Account</string>
+    <string name="my_favorite">My Favorite</string>
+    <string name="feedback">Feedback</string>
+    <string name="login_out">Log Out</string>
+    <string name="footer_hint_normal">Pull up to load more</string>
+    <string name="footer_hint_ready">Release to load more</string>
+    <string name="footer_hint_loading">Loading</string>
+    <string name="footer_no_more_data">No more</string>
+    <string name="header_hint_normal">Pull down to refresh</string>
+    <string name="header_hint_ready">Release to refresh</string>
+    <string name="header_last_time">Last updated time：</string>
+    <string name="header_hint_loading">Updating</string>
+    <string name="header_time_justnow">Just now</string>
+    <string name="header_time_minutes">Minutes ago</string>
+    <string name="header_time_hours">Hours ago</string>
+    <string name="header_time_days">Days ago</string>
+    <string name="login_fail">Log in failed</string>
+    <string name="login_success">Log in succeed</string>
+    <string name="vip1">VIP exclusive feature as a VIP,</string>
+    <string name="vip2">chose one to unlock</string>
+    <string name="watch_ad">Watch AD to unlock</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm_vip">Become a VIP</string>
+    <string name="confirm">Confirm</string>
+    <string name="vip_title">VIP exclusive Feature</string>
+    <string name="vip_tip">as a VIP, one-click to collect album</string>
+    <string name="unlike_title">Cancel or not?</string>
+    <string name="feedback_hint">Do you have any suggestion?</string>
+    <string name="send">Send</string>
+    <string name="login">Log In</string>
+    <string name="already_save">Image saved in</string>
+    <string name="dialog_logout">Are you sure to Log Out?</string>
+    <string name="suggest_send_success">Thanks for your feedback!</string>
+    <string name="feedback_fail_tips">Contains invalid characters, please check</string>
+    <string name="days">days</string>
+    <string name="login_tip">Please login your account</string>
+    <string name="like">Added to my favourite</string>
+    <string name="unlike">Removed from my favourite</string>
+    <string name="login_text">Log in with Google</string>
+    <string name="init_googleplay_fail">GooglePlay initial failed</string>
+    <string name="check_googleplay_fail">Failure to query GooglePlay oder</string>
+    <string name="pay_fail">Payment Failed</string>
+    <string name="fail_getOrderId">Failure to aquire oder number</string>
+    <string name="pay_success">Payment success</string>
+    <string name="no_login">Your account is in use on another device. Please sign in again.</string>
+    <string name="empty">no photo</string>
+    <string name="combo">plans and prices</string>
+    <string name="save_failed">save failed</string>
+    <string name="days_remaining">remains :</string>
+    <string name="vip_renewal">Renewal of membership</string>
+    <string name="now_new">Latest data</string>
+    <string name="vip_finish">VIP is expired, please renew it again</string>
+    <string name="get_goods_failed">Data acquisition failure</string>
+    <string name="not_reachable">no signal, click to reload</string>
+    <string name="network_unConnect">Network connection failure</string>
+    <!--Google Ad-->
+    <string name="banner_ad_unit_id">ca-app-pub-3159252643064769/6022477336</string>
+
+    <string name="ad_preparation">The Ad is in preparation</string>
+    <string name="ad_dialog_body">Closing this video early will prevent you from unlock the gallery. Are you sure?</string>
+</resources>

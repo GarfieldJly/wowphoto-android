@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/header_ll_root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="bottom"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header_rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="43dp"/>
+
+        <LinearLayout
+            android:id="@+id/header_ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/header_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_hint_normal"
+                android:textColor="@color/rll_text_color"
+                android:textSize="@dimen/header_title_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/header_tv_tip_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_last_time"
+                    android:textColor="@color/rll_text_color"
+                    android:textSize="@dimen/header_title_size" />
+
+                <TextView
+                    android:id="@+id/header_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/rll_text_color"
+                    android:textSize="@dimen/header_subtitle_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/header_iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/header_arrow_height"
+                android:layout_centerInParent="true"
+                android:src="@drawable/rll_arrow"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/header_pb_arrow"
+                android:layout_width="@dimen/header_progress_size"
+                android:layout_height="@dimen/header_progress_size"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/footer_progress_bg"
+                android:indeterminate="false"/>
+            <!--android:indeterminateDrawable="@drawable/footer_progress_bg"-->
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

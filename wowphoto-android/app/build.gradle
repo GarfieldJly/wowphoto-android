@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.1'
+    defaultConfig {
+        applicationId "com.milier.wowgallery"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 8
+        versionName "2.1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/rxjava.properties'
+    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+
+    signingConfigs {
+        release {
+            storeFile file("milier.jks")
+            storePassword "zxm.160118"
+            keyAlias "milier"
+            keyPassword "zxm.160118"
+        }
+        debug {
+            storeFile file("milier.jks")
+            storePassword "zxm.160118"
+            keyAlias "milier"
+            keyPassword "zxm.160118"
+        }
+    }
+
+    buildTypes {
+        release {
+            // 混淆
+            minifyEnabled true
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            // 前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            // 混淆
+            minifyEnabled false
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            // 前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.okhttp:okhttp:2.7.2'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-moshi:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+//    compile 'com.google.android.gms:play-services-auth:9.2.0'
+//    compile 'com.google.android.gms:play-services-ads:9.2.0'
+//    compile 'com.google.firebase:firebase-core:9.2.0'
+//    compile 'com.google.firebase:firebase-messaging:9.2.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    //Api版本
+//    compile 'com.zhexinit.wowphoto:wowphoto-server-api:1.21-SNAPSHOT'
+//    compile files('libs/aliyun-oss-sdk-android-2.3.0.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+//    compile 'com.appsflyer:af-android-sdk:4+@aar'
+
+    compile 'com.appsflyer:af-android-sdk:4.7.2'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    // 接入facebook 的广告
+    compile 'com.facebook.android:audience-network-sdk:4.+'
+    //接入google广告
+
+    //    compile 'com.google.firebase:firebase-ads:10.2.0'
+    compile files('libs/dagger-2.7.jar')
+    compile files('libs/javax.inject-1.jar')
+    compile files('libs/vungle-publisher-adaptive-id-4.0.3.jar')
+    compile project(':unity-ads')
+
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.google.code.gson:gson:2.5'
+    //Glide 加载图片
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+}
+
+//apply plugin: 'com.google.gms.google-services'
