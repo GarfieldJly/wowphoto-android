@@ -116,6 +116,10 @@ public class NewestFragment extends Fragment implements RefreshLoadMoreLayout.Ca
 //        getWelfareData(10,1);
 
 
+
+
+
+
     }
 
     private void getWelfareData(int pageSize, int currentPage) {
